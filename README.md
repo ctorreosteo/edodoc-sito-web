@@ -40,6 +40,8 @@ npm run dev
 
 ## Pubblicazione
 
-Qualsiasi hosting statico va bene, purché tutte le rotte servano `index.html` (i link interni e i vecchi indirizzi Shopify sono gestiti da React Router in `src/App.jsx`).
+`./deploy.sh` compila e pubblica su Firebase Hosting, sito `edodoc-sito` ([edodoc-sito.web.app](https://edodoc-sito.web.app)). Il progetto Google Cloud è quello di edodoc-hq: serve la stessa chiave del service account `edodoc-deploy` in `~/.config/edodoc/edodoc-deploy.json`, e il sito di destinazione è fissato in `firebase.json` perché quello predefinito è riservato al gestionale.
+
+Tutte le rotte servono `index.html`: i link interni e i vecchi indirizzi Shopify sono gestiti da React Router in `src/App.jsx`.
 
 Prima di spostare il dominio da Shopify: il libro punta ancora al checkout Shopify (`SITE.libro`) e va sostituito con un form dedicato.

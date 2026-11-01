@@ -10,8 +10,8 @@ export const SITE = {
   privacy: 'https://www.iubenda.com/privacy-policy/23796137',
   // Form MailerLite della masterclass (lo stesso del sito Shopify)
   masterclassForm: 'https://assets.mailerlite.com/jsonp/1264236/forms/180484059996095718/subscribe',
-  // Il libro oggi passa dal checkout Shopify: va sostituito con un form prima di spostare il dominio
-  libro: 'https://www.edodoc.it/products/libro',
+  // Link per scaricare il libro: finché è vuoto la pagina /libro mostra l'avviso di manutenzione
+  libro: null,
 }
 
 export const STATS = {

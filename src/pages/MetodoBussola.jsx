@@ -250,7 +250,7 @@ const MetodoBussola = () => {
             </Reveal>
           </div>
           <Reveal className="mb-lowcarb__photo">
-            <img src="/img/libro/libro-tessuto.webp" alt="Il libro Dieta Flessibile Animal Based di Edoardo Bo" loading="lazy" />
+            <img src="/img/libro/libro-dispositivi.webp" alt="L'ebook Togli la pancia senza rinunce di Edoardo Bo su MacBook, iPad e iPhone" loading="lazy" />
           </Reveal>
         </div>
       </section>

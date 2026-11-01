@@ -44,4 +44,4 @@ npm run dev
 
 Tutte le rotte servono `index.html`: i link interni e i vecchi indirizzi Shopify sono gestiti da React Router in `src/App.jsx`.
 
-Prima di spostare il dominio da Shopify: il libro punta ancora al checkout Shopify (`SITE.libro`) e va sostituito con un form dedicato.
+Il download del libro è sospeso: finché `SITE.libro` è vuoto, la pagina `/libro` mostra un avviso di manutenzione al posto del pulsante. Quando il form dedicato è pronto, basta inserire il link in `SITE.libro`.

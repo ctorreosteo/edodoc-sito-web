@@ -850,10 +850,10 @@ a.quote:hover {
 
 .risorsa--libro img {
   position: absolute;
-  top: 8%;
-  right: 6%;
-  width: 34%;
-  transform: rotate(8deg);
+  top: 6%;
+  right: 3%;
+  width: 35%;
+  transform: rotate(5deg);
   transition: transform 0.8s var(--ease);
 }
 

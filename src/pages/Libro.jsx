@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
-import { motion, useMotionValue, useSpring } from 'framer-motion'
+import React from 'react'
 import { Check } from 'lucide-react'
 import MagneticField from '../components/MagneticField'
 import FinalCta from '../components/FinalCta'
+import LibroDevices from '../components/LibroDevices'
 import { Btn, Kicker, MaskLines, Reveal } from '../components/Kit'
 import { SITE } from '../data/site'
 import { useSeo } from '../lib/motion'
@@ -26,35 +26,6 @@ const FAQ = [
   },
 ]
 
-const Book3D = () => {
-  const ref = useRef(null)
-  const rx = useMotionValue(0)
-  const ry = useMotionValue(0)
-  const sx = useSpring(rx, { stiffness: 120, damping: 14 })
-  const sy = useSpring(ry, { stiffness: 120, damping: 14 })
-  const move = (e) => {
-    const r = ref.current.getBoundingClientRect()
-    ry.set(((e.clientX - r.left) / r.width - 0.5) * 26)
-    rx.set(((e.clientY - r.top) / r.height - 0.5) * -20)
-  }
-  const reset = () => {
-    rx.set(0)
-    ry.set(0)
-  }
-  return (
-    <div ref={ref} className="book" onPointerMove={move} onPointerLeave={reset}>
-      <motion.img
-        src="/img/libro/libro.webp"
-        alt="Dieta Flessibile Animal Based, libro del Dott. Edoardo Bo"
-        style={{ rotateX: sx, rotateY: sy }}
-        initial={{ opacity: 0, y: 60, rotate: -6 }}
-        animate={{ opacity: 1, y: 0, rotate: 0 }}
-        transition={{ duration: 1.3, delay: 0.2 }}
-      />
-    </div>
-  )
-}
-
 const Libro = () => {
   useSeo('Mangia bene, dimagrisci senza bilancia: il libro gratuito | Dr. Edoardo Bo', 'Dieta Flessibile Animal Based, il libro gratuito del Dr. Edoardo Bo: cibi naturali e sazianti, senza pesare ogni grammo.', '/libro')
 
@@ -73,12 +44,32 @@ const Libro = () => {
               <p className="stars">★★★★★ <span>357 recensioni verificate</span></p>
             </Reveal>
             <Reveal delay={0.5} className="cta-row">
-              <Btn href={SITE.libro} external>
-                Scaricalo gratis
-              </Btn>
+              {SITE.libro ? (
+                <Btn href={SITE.libro} external>
+                  Scaricalo gratis
+                </Btn>
+              ) : (
+                <p className="body note">Il download del libro è momentaneamente in manutenzione. Torna disponibile a breve.</p>
+              )}
             </Reveal>
           </div>
-          <Book3D />
+          <LibroDevices label="L'ebook Togli la pancia senza rinunce aperto su iPad e iPhone" />
+        </div>
+      </section>
+
+      <section className="ovunque">
+        <MagneticField align={0.75} density={0.5} />
+        <div className="wrap">
+          <div className="ovunque__testo center">
+            <Kicker>Ebook gratuito</Kicker>
+            <h2 className="h h--lg">
+              <MaskLines lines={[{ text: 'Ovunque tu sia,' }, { text: 'è già con te.', className: 'serif accent' }]} />
+            </h2>
+            <Reveal>
+              <p className="lead">Sul telefono in pausa pranzo, sul tablet dal divano, sul computer quando vuoi prendere appunti.</p>
+            </Reveal>
+          </div>
+          <LibroDevices variant="full" label="L'ebook Togli la pancia senza rinunce aperto su MacBook, iPad e iPhone" />
         </div>
       </section>
 

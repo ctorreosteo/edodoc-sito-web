@@ -798,17 +798,383 @@
   color: var(--muted);
 }
 
-.book {
-  perspective: 1100px;
-  display: grid;
-  place-items: center;
+.ovunque {
+  position: relative;
+  padding: clamp(80px, 9vw, 130px) 0 clamp(60px, 7vw, 100px);
+  background: radial-gradient(70% 55% at 50% 62%, rgba(20, 97, 168, 0.42), transparent 72%), var(--ink);
+  overflow: hidden;
 }
 
-.book img {
+.ovunque__testo {
+  margin-bottom: clamp(36px, 5vw, 70px);
+}
+
+.ovunque__testo .lead {
+  margin-inline: auto;
+}
+
+/* Dispositivi del libro: tutte le misure interne sono in em, 1em è l'1% della larghezza del dispositivo */
+.scena {
+  position: relative;
+  width: 100%;
+  container-type: inline-size;
+  perspective: 1900px;
+}
+
+.scena::before {
+  content: '';
+  position: absolute;
+  inset: 8% 6%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 144, 64, 0.34), rgba(20, 97, 168, 0.22) 55%, transparent);
+  filter: blur(46px);
+}
+
+.scena--hero {
+  aspect-ratio: 1 / 1.1;
+  max-height: 76svh;
+}
+
+.scena--full {
+  aspect-ratio: 16 / 10;
+}
+
+.scena__el {
+  position: absolute;
+  width: var(--w);
+  font-size: calc(var(--w) / 100);
+  transform-style: preserve-3d;
+}
+
+.scena--hero .scena__el--ipad {
+  --w: 70cqw;
+  top: 2cqw;
+  left: 2cqw;
+}
+
+.scena--hero .scena__el--iphone {
+  --w: 31cqw;
+  right: 3cqw;
+  bottom: 3cqw;
+}
+
+.scena--full .scena__el--mac {
+  --w: 67cqw;
+  top: 1cqw;
+  left: 16.5cqw;
+}
+
+.scena--full .scena__el--ipad {
+  --w: 25cqw;
+  bottom: 3cqw;
+  left: 1cqw;
+}
+
+.scena--full .scena__el--iphone {
+  --w: 15.5cqw;
+  right: 6cqw;
+  bottom: 2cqw;
+}
+
+.scena__float {
+  transform-style: preserve-3d;
+  animation: scena-float 8s ease-in-out infinite;
+}
+
+@keyframes scena-float {
+  50% {
+    transform: translateY(-1.4em);
+  }
+}
+
+.scena__tilt {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.cta-row .note {
+  margin: 0;
+  color: var(--cream);
+}
+
+.scena__glare {
+  position: absolute;
+  inset: 1.4em;
+  border-radius: 4em;
+  background: linear-gradient(112deg, transparent 34%, rgba(255, 255, 255, 0.13) 46%, rgba(255, 255, 255, 0.03) 54%, transparent 62%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transform: translateZ(0.2em);
+}
+
+.scena__ombra {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -5em;
+  height: 9em;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.72), transparent);
+  filter: blur(1.4em);
+  transform: translateZ(-20em);
+}
+
+/* Scocca in titanio con lo spessore dato da due lastre arretrate */
+.dev {
+  --pad: 2.2em;
+  --radius: 5.4em;
+  position: relative;
+  padding: var(--pad);
+  border-radius: var(--radius);
+  background: #05060a;
+  box-shadow:
+    inset 0 0 0 0.16em #0d0e12,
+    0 0 0 0.3em #2a2d33,
+    0 0 0 0.42em #8b8f97,
+    0 3em 7em rgba(0, 0, 0, 0.55);
+  transform-style: preserve-3d;
+}
+
+.dev::before,
+.dev::after {
+  content: '';
+  position: absolute;
+  inset: -0.4em;
+  border-radius: inherit;
+  background: linear-gradient(120deg, #7c8089, #33363c 34%, #6a6d75 66%, #24262b);
+}
+
+.dev::before {
+  transform: translateZ(-0.8em);
+}
+
+.dev::after {
+  transform: translateZ(-1.6em);
+}
+
+.dev--phone {
+  --pad: 3em;
+  --radius: 15em;
+}
+
+.dev--pad {
+  --pad: 3em;
+  --radius: 5.6em;
+}
+
+.dev--mac {
+  --pad: 1.5em;
+  --radius: 2.2em;
+}
+
+.dev__screen {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: calc(var(--radius) - var(--pad));
+  background: radial-gradient(85% 60% at 50% 38%, #1a5189, #0b2747 62%, var(--ink));
+  aspect-ratio: 3 / 4;
+}
+
+.dev--phone .dev__screen {
+  aspect-ratio: 9 / 19.5;
+}
+
+.dev__screen--mac {
+  aspect-ratio: 16 / 10;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 5em;
+  border-radius: 0.6em;
+}
+
+.dev__cover {
+  position: relative;
+  width: 72%;
+  border-radius: 1.4em;
+  box-shadow: 0 2em 5em rgba(0, 0, 0, 0.6);
+}
+
+.dev__cover--full {
+  width: 84%;
+  border-radius: 0.8em;
+}
+
+.dev__screen--mac .dev__cover {
   width: auto;
-  max-width: 100%;
-  max-height: 68svh;
-  filter: drop-shadow(0 50px 70px rgba(0, 0, 0, 0.6));
+  height: 42em;
+  border-radius: 0.5em;
+}
+
+.dev__reader {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 2.4em;
+  padding: 0 6em;
+  text-align: center;
+}
+
+.dev__reader .dev__cover {
+  width: 88%;
+}
+
+.dev__reader strong {
+  margin-top: 3em;
+  font-size: 6em;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.dev__reader small {
+  font-size: 4.6em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dev__clock {
+  position: absolute;
+  top: 0.82em;
+  left: 2.5em;
+  font-size: 4.4em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.dev__island {
+  position: absolute;
+  top: 3.6em;
+  left: 50%;
+  width: 30em;
+  height: 8.6em;
+  border-radius: 8em;
+  background: #000;
+  transform: translateX(-50%);
+}
+
+.dev__home {
+  position: absolute;
+  bottom: 2.6em;
+  left: 50%;
+  width: 36em;
+  height: 1.3em;
+  border-radius: 2em;
+  background: rgba(255, 255, 255, 0.8);
+  transform: translateX(-50%);
+}
+
+.mac {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.mac__notch {
+  position: absolute;
+  top: 1.5em;
+  left: 50%;
+  z-index: 1;
+  width: 11em;
+  height: 1.7em;
+  border-radius: 0 0 0.6em 0.6em;
+  background: #05060a;
+  transform: translateX(-50%);
+}
+
+.mac__info {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  gap: 1.4em;
+  max-width: 31em;
+  color: #fff;
+}
+
+.mac__info span {
+  padding: 0.5em 1.1em;
+  border-radius: 99em;
+  background: var(--orange);
+  font-size: 1.15em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.mac__info strong {
+  font-size: 3.5em;
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.mac__info em {
+  font-family: var(--serif);
+  font-size: 2.3em;
+}
+
+.mac__info small {
+  font-size: 1.35em;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.mac__base {
+  position: relative;
+  width: 114%;
+  height: 2.3em;
+  margin-left: -7%;
+  border-radius: 0.2em 0.2em 2.2em 2.2em;
+  background: linear-gradient(180deg, #d9dce1, #a3a7af 38%, #5c5f67);
+  box-shadow: 0 1.4em 3em rgba(0, 0, 0, 0.6);
+}
+
+.mac__base::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15em;
+  height: 0.9em;
+  border-radius: 0 0 1em 1em;
+  background: #72757d;
+  transform: translateX(-50%);
+}
+
+.scena--full .scena__el--mac .scena__glare {
+  inset: 1em 1em 3em;
+  border-radius: 1em;
+}
+
+@media (max-width: 760px) {
+  .scena--hero {
+    max-height: none;
+  }
+
+  .scena--full {
+    aspect-ratio: 1 / 1.08;
+  }
+
+  .scena--full .scena__el--mac {
+    --w: 84cqw;
+    top: 1cqw;
+    left: 8cqw;
+  }
+
+  .scena--full .scena__el--ipad {
+    --w: 47cqw;
+    bottom: 2cqw;
+    left: 3cqw;
+  }
+
+  .scena--full .scena__el--iphone {
+    --w: 28cqw;
+    right: 6cqw;
+    bottom: 1cqw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scena__float {
+    animation: none;
+  }
 }
 
 .faq {

@@ -50,10 +50,10 @@ const Sessione = () => (
       </Reveal>
       <Reveal delay={0.1}>
         <Link to="/libro" className="risorsa risorsa--libro">
-          <img src="/img/libro/libro.webp" alt="Copertina del libro Dieta Flessibile Animal Based" loading="lazy" />
+          <img src="/img/libro/libro-mockup.webp" alt="L'ebook Togli la pancia senza rinunce su iPad e iPhone" loading="lazy" />
           <span className="risorsa__tag">Il libro gratuito</span>
           <h3 className="h h--md">Impara a mangiare bene senza bilancia</h3>
-          <span className="risorsa__go">Scaricalo gratis →</span>
+          <span className="risorsa__go">{SITE.libro ? 'Scaricalo gratis →' : 'Scopri il libro →'}</span>
         </Link>
       </Reveal>
     </div>

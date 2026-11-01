@@ -73,7 +73,7 @@ const Hero = () => {
             <Dial ring="METODO BUSSOLA · NUTRIZIONE · MOVIMENTO · COACHING · 6 MESI DI AFFIANCAMENTO · " showCardinals={false} />
           </motion.div>
           <div className="hero__portrait">
-            <img src="/img/edo/camice-luce.webp" alt="Dr. Edoardo Bo, biologo nutrizionista" fetchPriority="high" />
+            <img src="/img/edo/hero.webp" alt="Dr. Edoardo Bo, biologo nutrizionista" fetchPriority="high" />
           </div>
           <Needle rotate={north.rotate} className="needle--hero" />
 

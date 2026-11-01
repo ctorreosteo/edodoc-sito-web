@@ -8,30 +8,33 @@ import Quotes from '../components/Quotes'
 import { Dial, Needle, useFindNorth } from '../components/Compass'
 import { Btn, Kicker, MaskLines, Reveal } from '../components/Kit'
 import { useIntroDone } from '../components/Layout'
-import { PER_TE, STATS } from '../data/site'
+import { NON_PER_TE, PER_TE, STATS } from '../data/site'
 import { useSeo } from '../lib/motion'
 
 const CONFRONTO = [
-  ['Un piano scritto e lasciato lì', 'Ti seguo io, uno a uno, per 6 mesi'],
-  ['Conti le calorie e pesi ogni grammo', 'Cibi naturali e sazianti, senza convivere con la fame'],
-  ['Regole rigide: o tutto o niente', 'Principio 80/20: la flessibilità è parte del piano'],
-  ['Finita la dieta, riprendi il peso', 'Impari a gestirti in autonomia'],
+  ['Ti consegna uno schema e ti saluta', 'Ti affianca uno a uno per 6 mesi'],
+  ['Conti le calorie e pesi ogni grammo', 'Mangi cibo vero, senza bilancia e senza calcolatrice'],
+  ['La fame è il prezzo da pagare', 'Cibi naturali e sazianti: la fame non è un requisito'],
+  ['Grassi e carne da temere', 'Proteine animali di qualità e grassi non demonizzati'],
+  ['Uno sgarro e salta tutto', 'Principio 80/20: i pasti liberi sono dentro il piano'],
+  ['Lavora solo su cosa mangi', 'Lavora su cosa mangi e su chi sei quando mangi'],
+  ['Finisce, e resti solo', 'Finisce quando sai orientarti da solo'],
 ]
 
 const STRUMENTI = [
-  { title: 'Check ogni settimana', text: 'Analizziamo insieme i progressi e adattiamo il piano. Non aspetti mesi per capire se sta funzionando.', big: true },
-  { title: 'Chat privata', text: 'Audio e messaggi diretti, per affrontare le difficoltà nel momento in cui arrivano.' },
-  { title: 'Report mensili', text: 'Ogni mese guardiamo la strada fatta e decidiamo la prossima.' },
-  { title: 'Piano che si adatta', text: 'Lavoro, viaggi, famiglia, cene: il piano si modifica sulla tua vita, non il contrario.' },
-  { title: 'Movimento', text: "Un'attività mirata e sostenibile, costruita sul tuo punto di partenza." },
-  { title: 'Coaching', text: 'Lavoriamo su abitudini, autosabotaggio e stress: la parte che nessun piano dietetico ha mai affrontato.' },
+  { title: 'Correggi la rotta ogni settimana', text: 'Ogni settimana guardiamo i tuoi dati e adattiamo il piano. Non aspetti il controllo del mese dopo per scoprire che qualcosa non andava.', big: true },
+  { title: 'Risposte quando ti servono', text: 'Audio e messaggi diretti. Perché le difficoltà non si presentano il giorno dell\'appuntamento.' },
+  { title: 'Vedi i progressi ogni mese', text: 'La strada fatta e la prossima tappa, nero su bianco.' },
+  { title: 'Un piano che segue la tua vita', text: 'Lavoro, viaggi, famiglia, cene: si piega lui, non tu.' },
+  { title: 'Ti alleni senza stravolgere l\'agenda', text: "Un'attività mirata, costruita sul tuo punto di partenza. Niente allenamenti eroici da abbandonare dopo tre settimane." },
+  { title: 'Reggi anche nei giorni storti', text: 'Abitudini, autosabotaggio, stress, fame nervosa: il punto esatto in cui ogni dieta si rompe. È qui che facciamo la differenza.' },
 ]
 
 const ROTTA = [
-  { title: 'Consulenza conoscitiva', text: 'Una videochiamata gratuita di 30 minuti: analizzo la tua storia, individuo cosa ti blocca e ti dico con chiarezza se il percorso fa per te.' },
-  { title: 'Il piano cucito su di te', text: 'Costruiamo alimentazione e movimento sui tuoi ritmi, senza stravolgere la tua vita.' },
-  { title: 'Sei mesi fianco a fianco', text: 'Check settimanali, chat privata e adattamenti continui. Nei momenti difficili non sei mai solo.' },
-  { title: 'La tua bussola', text: "Alla fine hai gli strumenti per scegliere da solo, a casa e fuori casa. Non dipendi più da una dieta, né da me." },
+  { title: 'Capisci cosa ti blocca', text: 'Una videochiamata gratuita di 30 minuti: analizzo la tua storia, individuo cosa ti blocca e ti dico con chiarezza se il percorso fa per te.' },
+  { title: 'Ricevi un piano cucito su di te', text: 'Costruiamo alimentazione e movimento sui tuoi ritmi, senza stravolgere la tua vita.' },
+  { title: 'Non resti mai solo', text: 'Check settimanali, chat privata e adattamenti continui. Nei momenti difficili non sei mai solo.' },
+  { title: 'Sai orientarti senza di me', text: "Alla fine sai scegliere da solo, a casa e fuori casa. Non dipendi più da una dieta, né da me. È questo il vero obiettivo." },
 ]
 
 const CIBI = ['Carne', 'Pesce', 'Uova', 'Frutta']
@@ -80,12 +83,12 @@ const OttantaVenti = () => {
             <div className="mb-8020__stage">
               <motion.div className="mb-num" style={{ opacity: a, y: ay }}>
                 <b>80%</b>
-                <h3 className="h h--md">La tua base low-carb.</h3>
-                <p className="body">La maggior parte dei tuoi pasti segue il piano: cibi naturali e sazianti, costruiti sui tuoi ritmi. È qui che si costruisce il risultato.</p>
+                <h3 className="h h--md">Mangi bene e costruisci il risultato.</h3>
+                <p className="body">La maggior parte dei tuoi pasti segue la base low-carb: cibi naturali e sazianti, costruiti sui tuoi ritmi.</p>
               </motion.div>
               <motion.div className="mb-num mb-num--free" style={{ opacity: b, y: by }}>
                 <b>20%</b>
-                <h3 className="h h--md">La tua vita.</h3>
+                <h3 className="h h--md">Vivi, senza sensi di colpa.</h3>
                 <p className="body">La pizza, il ristorante, il compleanno. I pasti liberi sono previsti dal piano, non sono uno sgarro da espiare. E se esci dalla rotta, sai come rientrare subito, senza sensi di colpa.</p>
               </motion.div>
             </div>
@@ -139,8 +142,8 @@ const Rotta = () => {
 
 const MetodoBussola = () => {
   useSeo(
-    'Metodo Bussola: il percorso 1-1 low-carb flessibile | Dr. Edoardo Bo',
-    "Il Metodo Bussola è un percorso di affiancamento 1-1 di 6 mesi: alimentazione low-carb flessibile con principio 80/20, check settimanali e coaching. Senza rinunce, senza diete rigide.",
+    'Metodo Bussola: dimagrisci senza vivere a dieta | Dr. Edoardo Bo',
+    "Dimagrisci mangiando cibo vero, senza fame e senza contare calorie. Il Metodo Bussola è un affiancamento 1-1 di 6 mesi: low-carb flessibile con principio 80/20, check settimanali e coaching.",
     '/metodo-bussola',
   )
   const play = useIntroDone()
@@ -154,15 +157,15 @@ const MetodoBussola = () => {
           <div>
             <Kicker>Percorso di affiancamento 1-1 · {STATS.mesi} mesi</Kicker>
             <h1 className="h h--hero">
-              <MaskLines immediate delay={0.1} lines={[{ text: 'Non è' }, { text: 'una dieta.' }, { text: 'È una bussola.', className: 'serif accent' }]} />
+              <MaskLines immediate delay={0.1} lines={[{ text: 'Dimagrisci' }, { text: 'senza vivere' }, { text: 'a dieta.', className: 'serif accent' }]} />
             </h1>
             <Reveal delay={0.4}>
               <p className="lead">
-                <strong>Una dieta ti dice cosa mangiare finché dura.</strong> Il Metodo Bussola è il percorso con cui ti seguo personalmente, uno a uno, per {STATS.mesi} mesi: un'alimentazione low-carb flessibile con principio 80/20, e il lavoro sulle abitudini che ti riportavano sempre al punto di partenza.
+                <strong>{STATS.mesi} mesi di affiancamento 1-1 per perdere peso mangiando cibo vero, ritrovare energia e imparare a gestirti da solo.</strong> Niente fame da sopportare, niente calorie da contare: un'alimentazione low-carb flessibile con principio 80/20, dove la pizza con gli amici è già nel piano.
               </p>
             </Reveal>
             <Reveal delay={0.5} className="cta-row">
-              <Btn to="/consulenza-conoscitiva">Prenota la consulenza conoscitiva</Btn>
+              <Btn to="/consulenza-conoscitiva">Scopri se il percorso fa per te</Btn>
             </Reveal>
           </div>
           <div className="mb-dial" onPointerMove={north.onPointerMove} onPointerLeave={north.onPointerLeave} aria-hidden="true">
@@ -180,14 +183,14 @@ const MetodoBussola = () => {
         <div className="wrap">
           <Kicker>Cos'è</Kicker>
           <h2 className="h h--lg">
-            <MaskLines lines={[{ text: 'Quello che manca' }, { text: 'a ogni dieta.', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'Smetti di ricominciare' }, { text: 'ogni lunedì.', className: 'serif accent' }]} />
           </h2>
           <Reveal>
-            <p className="lead mb-lead">Ho sviluppato il Metodo Bussola dopo anni di lavoro su persone che avevano già provato tutto. Il problema non era la loro forza di volontà: era un metodo fatto per durare poche settimane.</p>
+            <p className="lead mb-lead">Ho sviluppato il Metodo Bussola dopo anni di lavoro con persone che avevano già provato tutto. Non mancava loro la forza di volontà. Mancava un metodo pensato per il giorno dopo la fine della dieta.</p>
           </Reveal>
           <div className="mb-vs" role="table" aria-label="Dieta classica e Metodo Bussola a confronto">
             <div className="mb-vs__head" role="row">
-              <span role="columnheader">La dieta classica</span>
+              <span role="columnheader">La dieta a termine</span>
               <span role="columnheader">Il Metodo Bussola</span>
             </div>
             {CONFRONTO.map(([a, b], i) => (
@@ -208,10 +211,10 @@ const MetodoBussola = () => {
         <div className="wrap">
           <Kicker>Affiancamento 1-1</Kicker>
           <h2 className="h h--lg">
-            <MaskLines lines={[{ text: 'Non ricevi un piano.' }, { text: 'Ricevi me.', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'Non ricevi un piano.' }, { text: 'Ricevi qualcuno che resta.', className: 'serif accent' }]} />
           </h2>
           <Reveal>
-            <p className="lead mb-lead">Seguo ogni anno un numero fisso di persone in affiancamento diretto: è l'unico modo per garantire un percorso davvero cucito su misura.</p>
+            <p className="lead mb-lead">Hai già provato tutto, ma non hai mai avuto qualcuno che restasse con te per davvero. Per questo seguo ogni anno un numero fisso di persone: di più, e diventerebbe l'ennesimo schema.</p>
           </Reveal>
           <div className="mb-bento">
             {STRUMENTI.map((s, i) => (
@@ -229,11 +232,11 @@ const MetodoBussola = () => {
           <div>
             <Kicker light>L'alimentazione</Kicker>
             <h2 className="h h--lg">
-              <MaskLines lines={[{ text: 'Low-carb,' }, { text: 'senza vivere', className: '' }, { text: 'a dieta.', className: 'serif accent-deep' }]} />
+              <MaskLines lines={[{ text: 'Low-carb' }, { text: 'che ti sazia' }, { text: 'davvero.', className: 'serif accent-deep' }]} />
             </h2>
             <Reveal>
-              <p className="body">Il cuore del metodo è un approccio low-carb basato su cibi naturali e sazianti, con una riduzione graduale dei carboidrati e proteine di qualità. Mangi bene, senza pesare ogni grammo e senza rinunciare al gusto o alla vita sociale.</p>
-              <p className="body">Non è un modello uguale per tutti: quantità, ritmi e scelte vengono costruiti sulla tua storia, sui tuoi obiettivi e sulla tua giornata.</p>
+              <p className="body">Il cuore del metodo è un'alimentazione low-carb e animal based flessibile: cibi naturali e poco processati, proteine animali di qualità, grassi non demonizzati e una riduzione graduale dei carboidrati raffinati. Mangi bene, senza pesare ogni grammo e senza rinunciare al gusto o alla vita sociale.</p>
+              <p className="body">Non è un modello uguale per tutti. Quantità, ritmi e scelte si costruiscono sulla tua storia e sulla tua giornata, e strumenti come il digiuno intermittente entrano solo se hanno senso per te.</p>
             </Reveal>
             <Reveal className="mb-cibi">
               {CIBI.map((c) => (
@@ -256,9 +259,9 @@ const MetodoBussola = () => {
 
       <section className="section section--deep">
         <div className="wrap">
-          <Kicker>Come funziona</Kicker>
+          <Kicker>I tuoi 6 mesi</Kicker>
           <h2 className="h h--lg mb-rotta__title">
-            <MaskLines lines={[{ text: 'La rotta' }, { text: 'dei 6 mesi.', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'Da «ricomincio lunedì»' }, { text: 'a «so cosa fare».', className: 'serif accent' }]} />
           </h2>
           <Rotta />
         </div>
@@ -266,15 +269,29 @@ const MetodoBussola = () => {
 
       <section className="section">
         <div className="wrap">
-          <Kicker>Per chi è</Kicker>
+          <Kicker>Non è per tutti</Kicker>
           <h2 className="h h--lg">
-            <MaskLines lines={[{ text: 'Ti riconosci' }, { text: 'in questo?', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'Sai subito' }, { text: 'se fa per te.', className: 'serif accent' }]} />
           </h2>
           <ul className="checks">
             {PER_TE.map(([a, b], i) => (
               <Reveal as="li" key={a} delay={i * 0.08}>
                 <i>
                   <Check size={18} strokeWidth={3} />
+                </i>
+                <div>
+                  <h3 className="h h--sm">{a}</h3>
+                  <p className="body">{b}</p>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
+          <h3 className="h h--md checks__title">Non è per te se</h3>
+          <ul className="checks checks--no">
+            {NON_PER_TE.map(([a, b], i) => (
+              <Reveal as="li" key={a} delay={i * 0.08}>
+                <i>
+                  <X size={18} strokeWidth={3} />
                 </i>
                 <div>
                   <h3 className="h h--sm">{a}</h3>

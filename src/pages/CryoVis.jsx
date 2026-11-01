@@ -13,7 +13,7 @@ const CryoVis = () => {
     <>
       <PageHero
         kicker="Accesso esclusivo · CryoVis"
-        lines={[{ text: 'Non è una dieta.' }, { text: 'È la fine del' }, { text: 'ciclo.', className: 'serif accent' }]}
+        lines={[{ text: 'Esci dal ciclo' }, { text: 'delle diete.' }, { text: 'E lo fai con me.', className: 'serif accent' }]}
         lead="Guarda il video qui sotto. Se ti riconosci in quello che vedi, tramite CryoVis puoi prenotare una videochiamata gratuita senza passare dai miei collaboratori: direttamente con me."
       >
         <Reveal delay={0.5} className="trio-stats">
@@ -28,7 +28,7 @@ const CryoVis = () => {
           <VideoFacade id="KUULHbxsxjw" title="Il Metodo Bussola" poster="/img/edo/ritratto.webp" />
           <div className="cta-row cta-row--center">
             <Btn href={SITE.booking} external>
-              Prenota la videochiamata gratuita
+              Blocca i tuoi 30 minuti gratuiti
             </Btn>
           </div>
         </div>
@@ -36,7 +36,7 @@ const CryoVis = () => {
 
       <section className="section section--deep">
         <div className="wrap">
-          <Kicker>Risultati reali</Kicker>
+          <Kicker>Storie vere, con nome e volto</Kicker>
           <Quotes />
         </div>
       </section>
@@ -44,11 +44,11 @@ const CryoVis = () => {
       <section className="section">
         <div className="wrap center">
           <Kicker>Accesso diretto</Kicker>
-          <h2 className="h h--lg">Prenota una chiamata gratuita con me.</h2>
-          <p className="lead">30 minuti. Capiremo insieme se ha senso. Solo 4 nuove persone al mese possono iniziare il percorso.</p>
+          <h2 className="h h--lg">In 30 minuti sai se fa per te.</h2>
+          <p className="lead">Una chiamata gratuita direttamente con me, senza passaggi intermedi. Solo 4 nuove persone al mese possono iniziare il percorso.</p>
           <div className="cta-row cta-row--center">
             <Btn href={SITE.booking} external>
-              Prenota la videochiamata gratuita
+              Blocca i tuoi 30 minuti gratuiti
             </Btn>
           </div>
         </div>

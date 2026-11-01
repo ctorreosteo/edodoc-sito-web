@@ -1224,3 +1224,17 @@
     letter-spacing: -0.01em;
   }
 }
+
+.checks__title {
+  margin-top: 56px;
+}
+
+.checks--no {
+  margin-top: 20px;
+}
+
+.checks--no i {
+  background: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+}

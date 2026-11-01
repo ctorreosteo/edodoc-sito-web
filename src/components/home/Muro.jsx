@@ -41,19 +41,20 @@ const Muro = () => {
         </div>
         <div className="muro__veil" />
         <div className="muro__center">
-          <Kicker>Risultati reali · Casi studio verificati</Kicker>
+          <Kicker>Storie vere, con nome e volto</Kicker>
           <h2 className="h h--xl">
-            <MaskLines lines={[{ text: 'Chi ha già' }, { text: 'cambiato tutto.', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'Hanno smesso' }, { text: 'di ricominciare.' }, { text: 'Ora tocca a te.', className: 'serif accent' }]} />
           </h2>
           <p className="muro__count">
             <Counter to={STATS.percorsi} prefix="+" /> <small>percorsi completati</small>
           </p>
-          <Btn to="/testimonianze">Guarda tutte le testimonianze</Btn>
+          <Btn to="/testimonianze">Guarda come ne sono usciti</Btn>
         </div>
       </div>
 
       <div className="wrap">
         <Quotes />
+        <p className="mb-disclaimer">I risultati variano da persona a persona.</p>
       </div>
     </section>
   )

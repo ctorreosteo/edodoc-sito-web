@@ -37,60 +37,69 @@ export const PILASTRI = [
   {
     key: 'nutrizione',
     title: 'Nutrizione',
+    headline: 'Mangi e ti sazi.',
     angle: -60,
-    text: "Non è la classica dieta restrittiva che ti costringe a contare calorie e a convivere con la fame. È un metodo innovativo e sartoriale, pensato per fornire al tuo corpo l'energia e i nutrienti essenziali di cui ha realmente bisogno.",
-    strong: 'Imparerai a vedere il cibo come un alleato prezioso.',
+    text: "Cibi naturali, proteine di qualità, meno carboidrati raffinati: un'alimentazione low-carb flessibile che sazia davvero. Niente calorie da contare, niente grammi da pesare, niente piatti tristi da sopportare fino alla prossima ricaduta.",
+    strong: 'Il cibo smette di essere il nemico.',
   },
   {
     key: 'movimento',
     title: 'Movimento',
+    headline: 'Più forza, più energia.',
     angle: 60,
-    text: "Non ti serve un allenamento estremo, ma un'attività mirata e sostenibile per riattivare il tuo corpo. Ogni passo che faremo sarà progettato per rafforzarti e ridarti vitalità.",
-    strong: 'Ti sentirai più forte, agile e pronto ad affrontare la giornata.',
+    text: "Non ti serve l'allenamento estremo che abbandoni dopo tre settimane. Ti serve un'attività mirata, sostenibile, compatibile con la tua agenda: quella che regge anche nelle settimane peggiori.",
+    strong: 'Senza stravolgere l\'agenda, senza sensi di colpa.',
   },
   {
     key: 'coaching',
     title: 'Coaching',
+    headline: 'Reggi anche nei giorni storti.',
     angle: 180,
-    text: 'Il coaching sarà la tua guida costante verso il successo. Lavoreremo insieme su strategie personalizzate per superare ogni ostacolo, con un supporto continuo in ogni fase del percorso.',
-    strong: 'Non sarai mai solo.',
+    text: "Sapere cosa mangiare è la parte facile. Quella difficile è la cena dopo una giornata storta, lo stress, l'autosabotaggio che arriva puntuale. È qui che ogni dieta si rompe, ed è qui che lavoriamo insieme.",
+    strong: 'Senza affiancamento ti perdi. La bussola ti riporta sulla rotta.',
   },
 ]
 
 export const PROBLEMI = [
   {
-    title: 'Paura delle rinunce e della fame costante',
-    text: 'Dieta significa privarsi dei cibi che ami, soffrire la fame e vivere con una sensazione di sacrificio continuo. Così si molla prima di vedere risultati.',
+    title: '«Stringi i denti, è solo un periodo»',
+    text: 'Fame, rinunce, cene saltate. Hai resistito finché hai potuto, poi la vita è tornata e il peso con lei. Non hai ceduto: quel piano non era fatto per durare.',
   },
   {
-    title: 'Sfiducia nei risultati e fallimenti passati',
-    text: 'Diete che non hanno funzionato o che hanno dato risultati solo temporanei, fino a convincersi che «le diete non funzionano per me».',
+    title: '«Se non funziona, è colpa tua»',
+    text: "Dopo l'ennesimo tentativo inizi a crederci: non hai disciplina, con te le diete non funzionano. È la conclusione più comoda per un metodo che ha fallito.",
   },
   {
-    title: 'Confusione e mancanza di personalizzazione',
-    text: 'Tante informazioni contrastanti e soluzioni generiche che non considerano le tue reali esigenze. Difficile sapere da dove iniziare.',
+    title: '«Basta seguire lo schema»',
+    text: 'Uno schema non sa che lavori fino a tardi, che viaggi, che ceni fuori. Al primo imprevisto salta, e resti solo con mille consigli contrastanti e nessuno a cui chiedere.',
   },
 ]
 
 export const PROTOCOLLO = [
   {
-    title: 'Anamnesi clinica e comportamentale',
-    text: 'Analizzo la tua storia metabolica, i tentativi precedenti e i pattern di autosabotaggio specifici che ti hanno bloccato fino ad oggi.',
+    title: 'Capisci perché finora non ha funzionato',
+    text: 'Rileggiamo insieme i tentativi passati: cosa ha funzionato per un po\', perché si è fermato, quali schemi si ripetono. La parte che di solito nessuno si ferma ad analizzare.',
   },
   {
-    title: 'Identificazione del blocco reale',
-    text: 'Individuo il loop specifico (metabolico, ormonale, comportamentale o mentale) che genera il ciclo di fallimento ripetuto nel tuo caso.',
+    title: 'Dai un nome a quello che ti blocca',
+    text: 'Individuiamo il loop che nel tuo caso ti riporta sempre al punto di partenza: alimentare, comportamentale o mentale. Sapere qual è cambia già il modo in cui ti guardi.',
   },
   {
-    title: 'Valutazione di compatibilità col Metodo Bussola',
-    text: 'Ti dico con chiarezza se il percorso è adatto alla tua situazione. Se non lo è, te lo dico ugualmente. Non accetto tutti.',
+    title: 'Sai subito se il percorso fa per te',
+    text: 'Ti dico con chiarezza se il percorso è adatto alla tua situazione. Se non lo è, te lo dico ugualmente. Non accetto tutti: accetto chi posso aiutare davvero.',
   },
 ]
 
 export const PER_TE = [
-  ['Hai già consultato nutrizionisti, dietologi o specialisti', 'ma sei sempre al punto di partenza dopo pochi mesi'],
-  ['Hai tra i 35 e i 60 anni e convivi da anni con il ciclo yo-yo', 'perdi peso, lo riprendi, ricominci, e non capisci perché'],
-  ["Senti che il problema non è solo l'alimentazione", 'ma qualcosa di comportamentale e mentale che nessun piano dietetico ha mai affrontato'],
+  ['Hai già provato nutrizionisti, dietologi, app e piani', 'hai perso peso, lo hai ripreso, e nessuno ti ha mai spiegato perché'],
+  ['Hai tra i 35 e i 60 anni e convivi da anni con il ciclo yo-yo', 'ti senti spento, gonfio, stanco, e non ti riconosci più allo specchio'],
+  ["Senti che il problema non è solo l'alimentazione", 'sai già cosa dovresti fare: ti manca chi ti aiuta a farlo quando la vita si mette di traverso'],
+]
+
+export const NON_PER_TE = [
+  ['Cerchi la dieta lampo per perdere peso in tre settimane', 'qui si costruisce qualcosa che deve reggere dopo, non solo durante'],
+  ['Vuoi uno schema da seguire senza metterti in discussione', 'il percorso lavora anche su abitudini e comportamenti, e chiede la tua parte'],
+  ['Stai cercando la pillola o il trucco che faccia il lavoro al posto tuo', 'non vendo scorciatoie: ti affianco mentre impari a orientarti da solo'],
 ]
 
 export const CITAZIONI = [

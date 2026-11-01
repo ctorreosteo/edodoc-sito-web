@@ -77,7 +77,7 @@ const Header = () => {
       <header className={`top ${scrolled ? 'is-scrolled' : ''}`}>
         {pathname !== '/masterclass' && (
           <Link to="/masterclass" className="top__bar">
-            Inizia da qui <span>→</span> Masterclass gratuita
+            Perché riprendi peso? <span>→</span> Masterclass gratis
           </Link>
         )}
         <div className="top__nav">
@@ -133,7 +133,7 @@ const Header = () => {
 const MobileDock = () => (
   <Link to="/consulenza-conoscitiva" className="dock">
     <span>
-      <b>Consulenza conoscitiva</b>
+      <b>Scopri se fa per te</b>
       <small>Videochiamata gratuita · 30 minuti</small>
     </span>
     <i>

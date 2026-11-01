@@ -562,6 +562,7 @@ ul {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: margin 0.5s var(--ease);
 }
 

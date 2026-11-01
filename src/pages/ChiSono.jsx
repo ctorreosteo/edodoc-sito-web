@@ -7,29 +7,29 @@ import { STATS } from '../data/site'
 import { useParallax, useSeo } from '../lib/motion'
 
 const MISSIONE = [
-  { title: 'Il mio sogno', text: 'Liberare le persone dalle false promesse delle diete, insegnando loro a nutrirsi con consapevolezza per vivere con energia, vitalità e soddisfazione.' },
-  { title: 'Il mio obiettivo', text: 'Essere il punto di riferimento per chi desidera un benessere autentico, ispirando uno stile di vita sano e bilanciato tra corpo e mente.' },
-  { title: 'Come lo faccio', text: 'Trasformando il rapporto con il cibo: niente più rinunce, solo energia, salute e risultati concreti, grazie a un metodo cucito su misura e sostenibile nel tempo.' },
+  { title: 'Ti libero dalle false promesse', text: 'Le false promesse: la dieta lampo, la colpa scaricata su chi non ce la fa, il cibo trattato come un nemico. Hanno convinto troppe persone di essere il problema.' },
+  { title: 'Ti semplifico la vita', text: 'Poche abitudini giuste fanno quasi tutto il lavoro. Il benessere non si ottiene con la forza di volontà: si costruisce smettendo di lavorare contro di sé.' },
+  { title: 'Ti seguo per intero', text: 'Uno a uno, sulla persona intera: cosa mangi, come ti muovi, cosa succede nella tua testa quando la giornata va storta. Con un metodo che regge fuori dallo studio.' },
 ]
 
 const STUDI = [
-  { title: 'Laurea magna cum laude in Scienze della Nutrizione', text: 'Grazie a una formazione scientifica di eccellenza, creo piani nutrizionali personalizzati, basati su evidenze scientifiche per garantirti risultati concreti e duraturi.' },
-  { title: 'Master in Nutrizione per la Performance', text: "Ti aiuto a migliorare le tue prestazioni fisiche e mentali con un'alimentazione e un'integrazione ottimizzata, per raggiungere il tuo massimo potenziale nella vita quotidiana e professionale." },
-  { title: 'Lifestyle Coach, Metodo Ongaro', text: 'Ti guido nella trasformazione del tuo stile di vita con un approccio che promuove salute fisica, benessere mentale ed equilibrio emotivo, per una qualità di vita migliore.' },
-  { title: 'Laurea in Biological Sciences (U.P.O.)', text: 'Con una conoscenza avanzata della biologia umana, applico strategie nutrizionali innovative, adattate ai meccanismi specifici del tuo corpo.' },
-  { title: 'Personal Trainer, Project InVictus', text: 'Unisco nutrizione e allenamento per aiutarti a costruire un corpo più forte, tonico e resiliente, prevenendo infortuni e migliorando la tua energia quotidiana.' },
+  { title: 'Laurea magna cum laude in Scienze della Nutrizione', text: 'Per te significa un piano costruito sulle evidenze scientifiche, non sulla moda del momento.' },
+  { title: 'Master in Nutrizione per la Performance', text: "Per te significa più energia e lucidità dove servono: in agenda, al lavoro, nella vita di tutti i giorni." },
+  { title: 'Lifestyle Coach, Metodo Ongaro', text: 'Per te significa lavorare su abitudini, stress ed equilibrio emotivo, non solo su quello che hai nel piatto.' },
+  { title: 'Laurea in Biological Sciences (U.P.O.)', text: 'Per te significa capire come funziona il tuo corpo, invece di subirlo a colpi di regole.' },
+  { title: 'Personal Trainer, Project InVictus', text: 'Per te significa un allenamento che si integra con la nutrizione, senza estremismi e senza farti male.' },
 ]
 
 const ChiSono = () => {
-  useSeo('Chi sono | Dr. Edoardo Bo', 'Biologo nutrizionista e mental coach: la storia, la missione e gli studi del Dr. Edoardo Bo, ideatore del Metodo Bussola.', '/chi-sono')
+  useSeo('Dr. Edoardo Bo, il nutrizionista che resta al tuo fianco', 'Biologo nutrizionista e mental coach, ideatore del Metodo Bussola: scienza della nutrizione, lavoro sulla mente e affiancamento 1-1.', '/chi-sono')
   const [ref, y] = useParallax(50)
 
   return (
     <>
       <PageHero
-        kicker="Biologo Nutrizionista · Mental Coach Certificato"
-        lines={[{ text: 'Dr. Edoardo' }, { text: 'Bo.', className: 'serif accent' }]}
-        lead="Ho sempre creduto che il benessere non sia solo una questione estetica, ma il risultato di un equilibrio tra mente, corpo ed energia."
+        kicker="Dr. Edoardo Bo · Biologo Nutrizionista · Mental Coach Certificato"
+        lines={[{ text: 'Il nutrizionista' }, { text: 'che resta' }, { text: 'al tuo fianco.', className: 'serif accent' }]}
+        lead="Non hai bisogno dell'ennesima dieta. Hai bisogno del percorso che mancava: scienza della nutrizione, lavoro sulla mente e qualcuno con cui farlo."
       />
 
       <section className="storia">
@@ -40,18 +40,18 @@ const ChiSono = () => {
           <div className="storia__text">
             <Kicker light>La mia storia</Kicker>
             <h2 className="h h--lg">
-              <MaskLines lines={[{ text: 'Un metodo' }, { text: 'diverso.', className: 'serif accent-deep' }]} />
+              <MaskLines lines={[{ text: 'Corpo e mente' }, { text: 'insieme.' }, { text: 'Così il risultato regge.', className: 'serif accent-deep' }]} />
             </h2>
             <Reveal>
-              <p className="body">Questa convinzione mi ha portato a specializzarmi come biologo nutrizionista e mental coach, con l'obiettivo di aiutare le persone a riscoprire il loro potenziale fisico e mentale.</p>
-              <p className="body">Troppe diete falliscono perché rigide, irrealistiche e lontane dalla vita reale. Per questo ho creato un metodo diverso: flessibile, sostenibile e integrato nella quotidianità, senza stravolgimenti.</p>
-              <p className="body">La mia missione è trasformare il benessere dei miei clienti, unendo nutrizione, coaching e strategie di gestione dello stress per ottenere risultati concreti e duraturi. Ogni giorno lavoro per sfatare i falsi miti sulla salute e costruire percorsi su misura.</p>
+              <p className="body">Perché il benessere non è una questione estetica: è un equilibrio tra mente, corpo ed energia. Per questo mi sono specializzato sia come biologo nutrizionista sia come mental coach. Lavorare su uno solo dei due lati significa lasciare il lavoro a metà.</p>
+              <p className="body">Troppe diete falliscono perché rigide, irrealistiche e lontane dalla vita reale. Il mio metodo fa il contrario: è flessibile, sostenibile e si infila nella tua giornata invece di stravolgerla.</p>
+              <p className="body">Le persone che arrivano da me hanno quasi sempre già provato di tutto. Non hanno bisogno di un'altra lista di cibi permessi. Hanno bisogno di capire perché tornano sempre al punto di partenza, e di qualcuno che resti al loro fianco mentre cambiano.</p>
             </Reveal>
             <Reveal className="storia__stat">
               <b>
                 <Counter to={STATS.percorsi} prefix="+" />
               </b>
-              <span>percorsi completati. Non si tratta solo di perdere peso, ma di sentirti meglio ogni giorno, senza rinunce impossibili o metodi che non funzionano.</span>
+              <span>percorsi completati. Non solo chili in meno: più energia, più lucidità, più fiducia in se stessi.</span>
             </Reveal>
           </div>
         </div>
@@ -59,7 +59,7 @@ const ChiSono = () => {
 
       <section className="section">
         <div className="wrap">
-          <Kicker>La mia missione</Kicker>
+          <Kicker>Cosa ottieni lavorando con me</Kicker>
           <div className="trio">
             {MISSIONE.map((m, i) => (
               <Reveal key={m.title} delay={i * 0.1} className="trio__item">
@@ -76,7 +76,7 @@ const ChiSono = () => {
         <div className="wrap">
           <Kicker>I miei studi</Kicker>
           <h2 className="h h--lg">
-            <MaskLines lines={[{ text: 'Scienza prima,' }, { text: 'poi metodo.', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'Hai la scienza' }, { text: 'dalla tua parte.', className: 'serif accent' }]} />
           </h2>
           <ul className="studi">
             {STUDI.map((s, i) => (

@@ -35,7 +35,7 @@ const Hero = () => {
         <motion.div className="hero__copy" style={{ y: copyY }}>
           <motion.p className="kicker" {...fadeUp(play, 0.1)}>
             <span className="kicker__mark" />
-            Hai perso e ripreso peso più volte?
+            Hai ripreso peso? Non sei tu il problema: è il metodo.
           </motion.p>
 
           {play && (
@@ -43,19 +43,19 @@ const Hero = () => {
               <MaskLines
                 immediate
                 delay={0.15}
-                lines={[{ text: 'Non sei tu' }, { text: 'il problema.' }, { text: 'È il metodo.', className: 'serif accent' }]}
+                lines={[{ text: 'Perdi peso' }, { text: 'mangiando' }, { text: 'cibo vero.', className: 'serif accent' }]}
               />
             </h1>
           )}
 
           <motion.p className="lead hero__lead" {...fadeUp(play, 0.75)}>
-            <strong>Il mio obiettivo? Fare della «dieta» uno stile di vita.</strong> Con il Metodo Bussola, il mio percorso di affiancamento continuo di 6 mesi, trasformiamo il tuo rapporto con il cibo: senza rinunce, senza diete rigide, senza tornare mai più al punto di partenza.
+            <strong>Niente fame, niente calorie da contare, niente ricadute da affrontare da solo.</strong> Le diete falliscono perché finiscono. Con il Metodo Bussola ti affianco 1-1 per 6 mesi: per tornare in forma, ritrovare energia e imparare a restarci, anche quando la vita si mette di traverso.
           </motion.p>
 
           <motion.div className="cta-row" {...fadeUp(play, 0.9)}>
-            <Btn to="/consulenza-conoscitiva">Prenota la consulenza conoscitiva</Btn>
+            <Btn to="/consulenza-conoscitiva">Scopri se il percorso fa per te</Btn>
             <Btn to="/masterclass" variant="ghost">
-              Masterclass gratuita
+              Guarda la masterclass gratuita
             </Btn>
           </motion.div>
         </motion.div>

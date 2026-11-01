@@ -8,11 +8,11 @@ import { SITE } from '../data/site'
 import { useSeo } from '../lib/motion'
 
 const DENTRO = [
-  'Perché il tuo metabolismo sabota ogni dieta, e non è colpa tua',
+  'Perché il corpo si difende da ogni dieta restrittiva, e non è colpa tua',
   'I meccanismi che ti riportano sempre al punto di partenza',
   'Un approccio basato su cibi naturali e sazianti (carne, pesce, uova, frutta) che ti permette di mangiare bene senza pesare ogni grammo o rinunciare al gusto',
   'Come rendere questo stile di vita flessibile e sostenibile nel tempo, anche fuori casa',
-  'Il primo passo concreto per uscire dal ciclo in modo definitivo',
+  'Il primo passo concreto per uscire dal ciclo yo-yo',
 ]
 
 const FAQ = [
@@ -56,25 +56,25 @@ const Book3D = () => {
 }
 
 const Libro = () => {
-  useSeo('Dieta Flessibile Animal Based, il libro gratuito | Dr. Edoardo Bo', 'Non è una dieta. È il primo passo per smettere di fallire. Scarica gratis il libro del Dr. Edoardo Bo.', '/libro')
+  useSeo('Mangia bene, dimagrisci senza bilancia: il libro gratuito | Dr. Edoardo Bo', 'Dieta Flessibile Animal Based, il libro gratuito del Dr. Edoardo Bo: cibi naturali e sazianti, senza pesare ogni grammo.', '/libro')
 
   return (
     <>
-      <section className="mc">
+      <section className="mc mb-hero">
         <MagneticField align={0.35} density={0.7} />
         <div className="wrap mc__grid">
           <div>
-            <Kicker>Libro gratuito · Accesso immediato</Kicker>
-            <h1 className="h h--xl">
-              <MaskLines immediate delay={0.1} lines={[{ text: 'Dieta' }, { text: 'Flessibile', className: 'serif accent' }, { text: 'Animal Based.' }]} />
+            <Kicker>Il libro gratuito · Dieta Flessibile Animal Based</Kicker>
+            <h1 className="h h--hero">
+              <MaskLines immediate delay={0.1} lines={[{ text: 'Mangia bene.' }, { text: 'Dimagrisci' }, { text: 'senza bilancia.', className: 'serif accent' }]} />
             </h1>
             <Reveal delay={0.4}>
-              <p className="lead">Non è una dieta. È il primo passo per smettere di fallire.</p>
+              <p className="lead">Per chi è stufo di sentirsi a dieta: carne, pesce, uova, frutta. Impari a saziarti con cibi naturali, senza pesare ogni grammo e senza rinunciare al gusto, anche fuori casa.</p>
               <p className="stars">★★★★★ <span>357 recensioni verificate</span></p>
             </Reveal>
             <Reveal delay={0.5} className="cta-row">
               <Btn href={SITE.libro} external>
-                Scarica ora, è gratuito
+                Scaricalo gratis
               </Btn>
             </Reveal>
           </div>
@@ -85,9 +85,9 @@ const Libro = () => {
       <section className="section section--deep">
         <div className="wrap split">
           <div>
-            <Kicker>Perché è gratis</Kicker>
+            <Kicker>Perché è gratuito</Kicker>
             <h2 className="h h--lg">
-              <MaskLines lines={[{ text: 'Non sei tu' }, { text: 'il problema.', className: 'serif accent' }]} />
+              <MaskLines lines={[{ text: 'Il punto' }, { text: 'di partenza' }, { text: 'che ti mancava.', className: 'serif accent' }]} />
             </h2>
             <Reveal>
               <p className="body">Hai già provato tutto. Diete, nutrizionisti, app, piani alimentari. Ogni volta hai ricominciato da capo, convinto di essere tu il problema.</p>
@@ -95,7 +95,7 @@ const Libro = () => {
             </Reveal>
           </div>
           <div>
-            <h3 className="h h--sm split__sub">Cosa trovi dentro</h3>
+            <h3 className="h h--sm split__sub">Cosa impari</h3>
             <ul className="checks checks--tight">
               {DENTRO.map((d, i) => (
                 <Reveal as="li" key={d} delay={i * 0.06}>

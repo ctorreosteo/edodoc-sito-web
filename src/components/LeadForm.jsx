@@ -3,7 +3,7 @@ import { ArrowRight, Check } from 'lucide-react'
 import { SITE } from '../data/site'
 
 // Iscrizione MailerLite. La risposta è opaca (no-cors): senza errore di rete la diamo per riuscita
-const LeadForm = ({ action = SITE.masterclassForm, cta = 'Guarda la video lezione gratuita' }) => {
+const LeadForm = ({ action = SITE.masterclassForm, cta = 'Mandami la lezione gratuita' }) => {
   const [state, setState] = useState('idle')
 
   const submit = async (e) => {

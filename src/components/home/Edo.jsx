@@ -22,11 +22,11 @@ const Edo = () => {
         <div>
           <Kicker light>Chi sono</Kicker>
           <h2 className="h h--lg">
-            <MaskLines lines={[{ text: 'Mi occupo' }, { text: 'di chi ha già' }, { text: 'provato tutto.', className: 'serif accent-deep' }]} />
+            <MaskLines lines={[{ text: 'Finalmente' }, { text: 'qualcuno che' }, { text: 'resta.', className: 'serif accent-deep' }]} />
           </h2>
           <Reveal>
             <p className="body">
-              Sono Biologo, Nutrizionista e Mental Coach Certificato. Il mio approccio integra nutrizione clinica, fisiologia metabolica e coaching comportamentale, perché troppe diete falliscono: sono rigide, irrealistiche e lontane dalla vita reale.
+              Hai già provato tutto? È esattamente di te che mi occupo. Non consegno diete: sono biologo nutrizionista e mental coach certificato, e unisco nutrizione, fisiologia e coaching comportamentale per un motivo semplice: la persona che vuoi tornare a essere c'è già, si è solo spenta. Il lavoro è toglierle di dosso quello che la copre, un'abitudine alla volta.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -38,7 +38,7 @@ const Edo = () => {
           </Reveal>
           <Reveal delay={0.2}>
             <Btn to="/chi-sono" variant="dark">
-              Scopri la mia storia
+              Scopri chi ti affianca
             </Btn>
           </Reveal>
         </div>

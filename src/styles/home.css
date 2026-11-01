@@ -266,6 +266,10 @@
     padding: 0;
   }
 
+  .yoyo__foot {
+    min-height: 244px;
+  }
+
   .yoyo__chart svg {
     width: 212%;
     max-width: none;
@@ -427,6 +431,10 @@
   color: var(--orange);
 }
 
+.pillar .h {
+  font-size: clamp(2rem, 3.9vw, 3.5rem);
+}
+
 .pillar .body {
   margin: 14px 0 10px;
   max-width: 36rem;
@@ -475,7 +483,7 @@
   }
 
   .metodo__panels {
-    height: 400px;
+    height: 340px;
   }
 }
 
@@ -558,7 +566,7 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(46% 34% at 50% 50%, rgba(5, 13, 28, 0.96) 42%, rgba(5, 13, 28, 0.08) 100%),
+    radial-gradient(62% 44% at 50% 50%, rgba(5, 13, 28, 0.97) 52%, rgba(5, 13, 28, 0.1) 100%),
     linear-gradient(180deg, var(--ink) 0, transparent 14%, transparent 86%, var(--ink) 100%);
 }
 
@@ -908,4 +916,12 @@ a.quote:hover {
 
 .final .mask__line {
   text-align: center;
+}
+
+/* Titoli lunghi: su telefono ogni riga deve restare intera */
+@media (max-width: 600px) {
+  .final .h,
+  .muro__center .h {
+    font-size: 2.1rem;
+  }
 }

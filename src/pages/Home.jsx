@@ -12,15 +12,15 @@ import { useSeo } from '../lib/motion'
 
 const Home = () => {
   useSeo(
-    'Dr. Edoardo Bo | Biologo Nutrizionista e Mental Coach · Metodo Bussola',
-    'Hai perso e ripreso peso più volte? Non sei tu il problema, è il metodo. Il Metodo Bussola è un percorso di affiancamento di 6 mesi: senza rinunce, senza diete rigide.',
+    'Perdi peso mangiando cibo vero | Dr. Edoardo Bo · Metodo Bussola',
+    'Perdi peso mangiando cibo vero, senza fame e senza contare calorie. Il Metodo Bussola è un affiancamento 1-1 di 6 mesi del Dr. Edoardo Bo, biologo nutrizionista e mental coach.',
     '/',
   )
 
   return (
     <>
       <Hero />
-      <Marquee items={['Senza rinunce', 'Senza diete rigide', 'Nutrizione', 'Movimento', 'Coaching', 'Metodo cucito su misura']} />
+      <Marquee items={['Cibo vero', 'Niente calorie da contare', 'Niente fame da sopportare', 'Low-carb flessibile', 'Principio 80/20', 'Affiancamento 1-1']} />
       <YoYo />
       <Manifesto />
       <Metodo />

@@ -10,7 +10,7 @@ import { EASE, useSeo } from '../lib/motion'
 const FILTERS = ['Tutti', 'Dimagrimento', 'Massa muscolare', 'Imprenditori e manager', 'Mentalità e autostima', 'Salute ed energia']
 
 const Testimonianze = () => {
-  useSeo('Testimonianze e casi studio | Dr. Edoardo Bo', 'Video testimonianze e casi studio dei percorsi con il Metodo Bussola: situazione di partenza, percorso effettuato e risultati ottenuti.', '/testimonianze')
+  useSeo('Testimonianze: la prossima storia può essere la tua | Dr. Edoardo Bo', 'Video testimonianze e casi studio del Metodo Bussola: da dove sono partite queste persone, cosa hanno fatto, dove sono arrivate.', '/testimonianze')
   const [filter, setFilter] = useState('Tutti')
   const [query, setQuery] = useState('')
 
@@ -23,8 +23,8 @@ const Testimonianze = () => {
     <>
       <PageHero
         kicker={`${casi.length} video testimonianze e casi studio`}
-        lines={[{ text: 'Chi ha già' }, { text: 'cambiato tutto.', className: 'serif accent' }]}
-        lead="Persone vere, storie vere: dove erano, cosa hanno fatto, dove sono arrivate."
+        lines={[{ text: 'La prossima storia' }, { text: 'può essere la tua.', className: 'serif accent' }]}
+        lead="Imprenditori, manager, professionisti, persone di ogni età. La maggior parte aveva già provato altre strade. Guarda da dove sono partite e dove sono arrivate: troverai qualcuno che somiglia a te."
       />
 
       <section className="section section--tight">
@@ -53,6 +53,7 @@ const Testimonianze = () => {
             </AnimatePresence>
           </motion.div>
           {list.length === 0 && <p className="body cases__empty">Nessun caso studio trovato.</p>}
+          <p className="mb-disclaimer">I risultati variano da persona a persona.</p>
         </div>
       </section>
 

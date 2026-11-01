@@ -54,7 +54,7 @@ const YoYo = () => {
         <div className="wrap yoyo__head">
           <Kicker>Il ciclo yo-yo</Kicker>
           <motion.h2 className="h h--lg" style={{ opacity: titleOpacity }}>
-            Sempre la <span className="serif accent">stessa storia.</span>
+            Esci dal ciclo <span className="serif accent">perdi, riprendi, ricominci.</span>
           </motion.h2>
         </div>
 
@@ -78,7 +78,7 @@ const YoYo = () => {
             <text x="150" y="330" textAnchor="middle" className="yoyo__tag">perdi peso</text>
             <text x="300" y="112" textAnchor="middle" className="yoyo__tag">lo riprendi</text>
             <text x="450" y="305" textAnchor="middle" className="yoyo__tag">ricominci</text>
-            <motion.text x="1120" y="186" textAnchor="end" className="yoyo__tag yoyo__tag--on" style={{ opacity: exitOpacity }}>
+            <motion.text x="1192" y="186" textAnchor="end" className="yoyo__tag yoyo__tag--on" style={{ opacity: exitOpacity }}>
               Metodo Bussola
             </motion.text>
           </motion.svg>
@@ -90,7 +90,7 @@ const YoYo = () => {
           ))}
           <motion.div className="yoyo__exit" style={{ opacity: exitOpacity, y: exitY }}>
             <p className="h h--md">
-              Il ciclo yo-yo non è un problema di forza di volontà, <span className="accent">ma di metodo.</span>
+              Non ti serve più disciplina. <span className="accent">Ti serve smettere di lavorare contro di te.</span>
             </p>
           </motion.div>
         </div>

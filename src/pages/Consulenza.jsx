@@ -1,34 +1,34 @@
 import React from 'react'
-import { Check } from 'lucide-react'
+import { Check, X } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import FinalCta from '../components/FinalCta'
 import Quotes from '../components/Quotes'
 import { Btn, Kicker, MaskLines, Reveal } from '../components/Kit'
-import { PER_TE, POSTI, PROTOCOLLO, SITE } from '../data/site'
+import { NON_PER_TE, PER_TE, POSTI, PROTOCOLLO, SITE } from '../data/site'
 import { useSeo } from '../lib/motion'
 
 const Consulenza = () => {
-  useSeo('Consulenza conoscitiva | Dr. Edoardo Bo', 'Videochiamata gratuita di 30 minuti per capire dove sei bloccato, perché le diete non hanno funzionato e se il Metodo Bussola fa per te.', '/consulenza-conoscitiva')
+  useSeo('Consulenza gratuita: in 30 minuti sai cosa ti blocca | Dr. Edoardo Bo', '30 minuti gratuiti per capire perché le diete con te non hanno retto, dove sei bloccato e se il Metodo Bussola fa per te. Non accetto tutti.', '/consulenza-conoscitiva')
   const mese = POSTI.mese
 
   return (
     <>
       <PageHero
-        kicker="Videochiamata gratuita · 30 minuti"
+        kicker={POSTI.esauriti ? "Posti di quest'anno esauriti · Videochiamata gratuita, 30 minuti" : 'Videochiamata gratuita · 30 minuti'}
         lines={
           POSTI.esauriti
-            ? [{ text: 'I posti per' }, { text: "quest'anno sono" }, { text: 'esauriti.', className: 'serif accent' }]
-            : [{ text: 'Prenota la tua' }, { text: 'consulenza', className: 'serif accent' }, { text: 'conoscitiva.' }]
+            ? [{ text: 'Assicurati' }, { text: 'il tuo posto' }, { text: `per ${mese}.`, className: 'serif accent' }]
+            : [{ text: 'In 30 minuti' }, { text: 'sai se posso' }, { text: 'aiutarti.', className: 'serif accent' }]
         }
         lead={
           POSTI.esauriti
-            ? `Una sessione clinica e diagnostica per capire dove sei bloccato, perché le diete non hanno funzionato e se ci sono i presupposti per il mio percorso di affiancamento. Se ci sono, puoi prenotare il tuo posto per iniziare con me da ${mese}.`
-            : 'Una sessione clinica e diagnostica per capire dove sei bloccato, perché le diete non hanno funzionato e se ci sono i presupposti per il mio percorso di affiancamento.'
+            ? `In 30 minuti gratuiti capisci perché le diete con te non hanno retto, dove sei bloccato e se ci sono i presupposti per lavorare insieme. Se ci sono, blocchi il tuo posto e parti al meglio dal primo giorno.`
+            : 'In 30 minuti capisci perché le diete con te non hanno retto, dove sei bloccato e se ci sono i presupposti per lavorare insieme.'
         }
       >
         <Reveal delay={0.5} className="cta-row">
           <Btn href={SITE.booking} external>
-            Prenota la tua videochiamata gratuita
+            Blocca i tuoi 30 minuti gratuiti
           </Btn>
         </Reveal>
       </PageHero>
@@ -37,17 +37,17 @@ const Consulenza = () => {
         <section className="section">
           <div className="wrap split">
             <div>
-              <Kicker>Il motivo</Kicker>
+              <Kicker>Perché i posti sono pochi</Kicker>
               <h2 className="h h--lg">
-                <MaskLines lines={[{ text: 'Perché la lista' }, { text: "d'attesa.", className: 'serif accent' }]} />
+                <MaskLines lines={[{ text: 'Pochi posti.' }, { text: 'Per seguirti davvero.', className: 'serif accent' }]} />
               </h2>
             </div>
             <Reveal>
               <p className="body">
-                Seguo ogni anno un numero fisso di persone in affiancamento diretto: è l'unico modo in cui riesco a garantire un percorso davvero cucito su misura, non un piano scritto e lasciato lì. A questo punto dell'anno ho già raggiunto quel numero.
+                Seguo ogni anno un numero fisso di persone in affiancamento diretto. È l'unico modo per offrire un percorso cucito su misura invece di un piano scritto e lasciato lì. Per quest'anno quel numero l'ho raggiunto.
               </p>
               <p className="body">
-                Se durante la videochiamata emergono i presupposti per iniziare il percorso con me, riserviamo insieme uno dei posti disponibili per {mese}, così parti al meglio fin dal primo giorno. I posti si esauriscono in base a chi prenota, non a chi si presenta a {mese}.
+                Se in videochiamata emergono i presupposti, riserviamo insieme uno dei posti di {mese}. I posti vanno a chi prenota prima, non a chi si presenta a {mese}: chi aspetta il momento giusto di solito lo aspetta anche l'anno dopo.
               </p>
             </Reveal>
           </div>
@@ -56,9 +56,9 @@ const Consulenza = () => {
 
       <section className="section section--deep">
         <div className="wrap">
-          <Kicker>Questa videochiamata è per te se</Kicker>
+          <Kicker>È per te se</Kicker>
           <h2 className="h h--lg">
-            <MaskLines lines={[{ text: 'Ti riconosci', className: '' }, { text: 'in questo.', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'Un percorso nato' }, { text: 'per persone come te.', className: 'serif accent' }]} />
           </h2>
           <ul className="checks">
             {PER_TE.map(([a, b], i) => (
@@ -73,14 +73,28 @@ const Consulenza = () => {
               </Reveal>
             ))}
           </ul>
+          <h3 className="h h--md checks__title">Non è per te se</h3>
+          <ul className="checks checks--no">
+            {NON_PER_TE.map(([a, b], i) => (
+              <Reveal as="li" key={a} delay={i * 0.08}>
+                <i>
+                  <X size={18} strokeWidth={3} />
+                </i>
+                <div>
+                  <h3 className="h h--sm">{a}</h3>
+                  <p className="body">{b}</p>
+                </div>
+              </Reveal>
+            ))}
+          </ul>
         </div>
       </section>
 
       <section className="section">
         <div className="wrap">
-          <Kicker>Protocollo della sessione</Kicker>
+          <Kicker>La tua videochiamata</Kicker>
           <h2 className="h h--lg">
-            <MaskLines lines={[{ text: 'Cosa succede' }, { text: 'durante la call.', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'Cosa porti a casa' }, { text: 'in 30 minuti.', className: 'serif accent' }]} />
           </h2>
           <ol className="steps">
             {PROTOCOLLO.map((s, i) => (
@@ -93,7 +107,7 @@ const Consulenza = () => {
           </ol>
           <Reveal>
             <p className="body note">
-              La videochiamata è gratuita e senza impegno.
+              È gratuita e senza impegno: nel peggiore dei casi te ne vai sapendo finalmente perché non ha funzionato.
               {POSTI.esauriti && ` Se dalla call risulta che ci siamo, ti spiego come funziona la prenotazione e blocchi il tuo posto per ${mese}. Non c'è nulla da decidere prima di quel momento.`}
             </p>
           </Reveal>

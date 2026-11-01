@@ -7,28 +7,28 @@ const FinalCta = () => (
   <section className="final">
     <MagneticField align={0.92} density={0.8} />
     <div className="wrap final__in">
-      <Kicker>Ora, una domanda per te</Kicker>
+      <Kicker>La scelta è tua</Kicker>
       <h2 className="h h--xl">
         <MaskLines
           lines={[
-            { text: 'Pronto a uscire' },
-            { text: 'dal ciclo delle' },
-            { text: 'diete yo-yo?', className: 'serif accent' },
+            { text: 'Questa può essere' },
+            { text: "l'ultima volta" },
+            { text: 'che ricominci.', className: 'serif accent' },
           ]}
         />
       </h2>
       <Reveal delay={0.2}>
         <p className="lead">
-          Prenota la tua consulenza conoscitiva e scopri come posso aiutarti, passo dopo passo, a raggiungere i tuoi obiettivi con un metodo cucito sulla tua persona.
-          {POSTI.esauriti && ` I posti per quest'anno sono esauriti: si riparte da ${POSTI.mese}.`}
+          Puoi ripartire lunedì con l'ennesimo schema, da solo, come le altre volte. Oppure puoi farti affiancare da chi lavora ogni giorno con persone che hanno già provato tutto. Bastano 30 minuti gratuiti per sapere se ha senso.
+          {POSTI.esauriti && ` I posti di quest'anno sono esauriti: si riparte a ${POSTI.mese}.`}
         </p>
       </Reveal>
       <Reveal delay={0.3} className="cta-row cta-row--center">
         <Btn href={SITE.booking} external>
-          Prenota la videochiamata gratuita
+          Blocca i tuoi 30 minuti gratuiti
         </Btn>
         <Btn to="/consulenza-conoscitiva" variant="ghost">
-          Come funziona
+          Cosa succede nella call
         </Btn>
       </Reveal>
     </div>

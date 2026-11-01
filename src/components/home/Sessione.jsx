@@ -10,14 +10,14 @@ const Sessione = () => (
         <div>
           <Kicker>Videochiamata gratuita · 30 minuti</Kicker>
           <h2 className="h h--lg">
-            <MaskLines lines={[{ text: 'Cosa succede' }, { text: 'nella prima', className: '' }, { text: 'consulenza.', className: 'serif accent' }]} />
+            <MaskLines lines={[{ text: 'In 30 minuti' }, { text: 'sai cosa' }, { text: 'ti blocca.', className: 'serif accent' }]} />
           </h2>
         </div>
         <Reveal className="sessione__note">
-          <p className="body">Analizzeremo insieme le tue abitudini e i tuoi obiettivi. Ti aiuterò a capire cosa ti sta bloccando e come puoi iniziare a migliorare sin da subito.</p>
+          <p className="body">Esci dalla chiamata con una risposta chiara: cosa non ha funzionato finora, e se posso aiutarti. Se non posso te lo dico, e hai comunque guadagnato 30 minuti di chiarezza.</p>
           {POSTI.esauriti && (
             <p className="tag-live">
-              <i /> Posti di quest'anno esauriti · Prenotazioni aperte per {POSTI.mese}
+              <i /> Posti di quest'anno esauriti · Si riparte a {POSTI.mese}
             </p>
           )}
         </Reveal>
@@ -35,7 +35,7 @@ const Sessione = () => (
 
       <Reveal className="cta-row">
         <Btn href={SITE.booking} external>
-          Prenota la videochiamata gratuita
+          Blocca i tuoi 30 minuti gratuiti
         </Btn>
       </Reveal>
     </div>
@@ -43,17 +43,17 @@ const Sessione = () => (
     <div className="wrap risorse">
       <Reveal>
         <Link to="/masterclass" className="risorsa risorsa--mc">
-          <span className="risorsa__tag">Video lezione gratuita</span>
-          <h3 className="h h--md">Perché hai fallito ogni dieta, e cosa cambia davvero</h3>
-          <span className="risorsa__go">Guarda la masterclass →</span>
+          <span className="risorsa__tag">Non sei pronto a parlarne? Inizia da qui</span>
+          <h3 className="h h--md">Scopri perché riprendi sempre il peso</h3>
+          <span className="risorsa__go">Guarda la lezione gratuita →</span>
         </Link>
       </Reveal>
       <Reveal delay={0.1}>
         <Link to="/libro" className="risorsa risorsa--libro">
           <img src="/img/libro/libro.webp" alt="Copertina del libro Dieta Flessibile Animal Based" loading="lazy" />
-          <span className="risorsa__tag">Libro gratuito</span>
-          <h3 className="h h--md">Dieta Flessibile Animal Based</h3>
-          <span className="risorsa__go">Scopri il libro →</span>
+          <span className="risorsa__tag">Il libro gratuito</span>
+          <h3 className="h h--md">Impara a mangiare bene senza bilancia</h3>
+          <span className="risorsa__go">Scaricalo gratis →</span>
         </Link>
       </Reveal>
     </div>

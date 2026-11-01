@@ -9,26 +9,26 @@ import { STATS } from '../data/site'
 import { useSeo } from '../lib/motion'
 
 const PUNTI = [
-  ['Perché il tuo metabolismo sabota ogni dieta', 'e non è colpa tua'],
-  ['I 3 loop che ti riportano sempre al punto di partenza', 'e come riconoscerli prima che ti blocchino ancora'],
-  ['Cosa serve davvero per uscirne', 'in modo stabile e definitivo'],
+  ['Perché il corpo si difende da ogni dieta restrittiva', 'e perché non è colpa tua'],
+  ['I 3 loop che ti riportano sempre al punto di partenza', 'e come riconoscerli prima che scattino di nuovo'],
+  ['Cosa deve cambiare davvero', 'per non ricominciare da capo a settembre'],
 ]
 
 const Masterclass = () => {
-  useSeo('Masterclass gratuita | Dr. Edoardo Bo', 'Una video lezione gratuita per chi ha già provato tanti approcci e vuole capire cosa non ha funzionato davvero.', '/masterclass')
+  useSeo('Masterclass gratuita: scopri perché riprendi sempre il peso | Dr. Edoardo Bo', 'Non hai fallito tu, la dieta sì. Una video lezione gratuita per capire perché torni sempre al punto di partenza e cosa deve cambiare.', '/masterclass')
 
   return (
     <>
-      <section className="mc">
+      <section className="mc mb-hero">
         <MagneticField align={0.3} density={0.7} />
         <div className="wrap mc__grid">
           <div>
             <Kicker>Masterclass gratuita</Kicker>
-            <h1 className="h h--xl">
-              <MaskLines immediate delay={0.1} lines={[{ text: 'Perché hai' }, { text: 'fallito ogni', className: '' }, { text: 'dieta.', className: 'serif accent' }]} />
+            <h1 className="h h--hero">
+              <MaskLines immediate delay={0.1} lines={[{ text: 'Scopri perché' }, { text: 'riprendi' }, { text: 'sempre il peso.', className: 'serif accent' }]} />
             </h1>
             <Reveal delay={0.4}>
-              <p className="lead">Una video lezione gratuita per chi ha già provato tanti approcci e vuole capire cosa non ha funzionato davvero, e cosa cambia davvero.</p>
+              <p className="lead">Non hai fallito tu: ha fallito la dieta. In questa video lezione gratuita capisci cosa è successo davvero le altre volte, così smetti di darti la colpa e sai cosa cambiare prima di ripartire.</p>
             </Reveal>
             <ul className="checks checks--tight">
               {PUNTI.map(([a, b], i) => (
@@ -44,7 +44,7 @@ const Masterclass = () => {
             </ul>
           </div>
           <Reveal delay={0.3} className="mc__card">
-            <h2 className="h h--sm">Inserisci nome e email. Accedi subito.</h2>
+            <h2 className="h h--sm">Dove ti mando la lezione?</h2>
             <LeadForm />
           </Reveal>
         </div>
@@ -56,7 +56,7 @@ const Masterclass = () => {
           <div>
             <Kicker>Dr. Edoardo Bo</Kicker>
             <p className="lead">
-              Sono Biologo, Nutrizionista e Mental Coach Certificato. Ho seguito centinaia di persone che avevano già provato tutto e avevano smesso di credere che potesse funzionare. Ho sviluppato il Metodo Bussola esattamente per loro.
+              Sono biologo nutrizionista e mental coach certificato. Ho seguito centinaia di persone che avevano già provato tutto e avevano smesso di crederci. Il Metodo Bussola esiste per loro.
             </p>
             <p className="storia__stat storia__stat--dark">
               <b>+{STATS.percorsi}</b>

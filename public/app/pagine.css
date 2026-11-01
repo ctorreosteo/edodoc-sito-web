@@ -1,0 +1,83 @@
+:root {
+  --ink: #050d1c;
+  --ink-muted: rgba(5, 13, 28, 0.68);
+  --ink-line: rgba(5, 13, 28, 0.14);
+  --cream: #f6f1ea;
+  --link: #d9620f;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f6f1ea;
+    --ink-muted: rgba(246, 241, 234, 0.68);
+    --ink-line: rgba(246, 241, 234, 0.13);
+    --cream: #081830;
+    --link: #ff9040;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 400 17px/1.6 Montserrat, system-ui, -apple-system, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+h2 {
+  margin: 40px 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+p,
+ul {
+  margin: 0 0 14px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+a {
+  color: var(--link);
+}
+
+table {
+  width: 100%;
+  margin-bottom: 14px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+th,
+td {
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--ink-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.nota {
+  color: var(--ink-muted);
+  font-size: 15px;
+}

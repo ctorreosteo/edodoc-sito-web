@@ -7,17 +7,11 @@ const TITOLI = ['Laurea magna cum laude in Scienze della Nutrizione', 'Master in
 
 const Edo = () => {
   const [ref, y] = useParallax(50)
-  const [ref2, y2] = useParallax(90)
   return (
     <section className="edo">
       <div className="wrap edo__grid">
-        <div className="edo__photos">
-          <div ref={ref} className="edo__photo">
-            <motion.img src="/img/edo/esterno.webp" alt="Edoardo Bo all'aperto" loading="lazy" style={{ y, scale: 1.2 }} />
-          </div>
-          <motion.div ref={ref2} className="edo__photo edo__photo--small" style={{ y: y2 }}>
-            <img src="/img/edo/primo-piano.webp" alt="Ritratto di Edoardo Bo" loading="lazy" />
-          </motion.div>
+        <div ref={ref} className="edo__photo">
+          <motion.img src="/img/edo/studio.webp" alt="Dr. Edoardo Bo in camice, nel suo studio" loading="lazy" style={{ y, scale: 1.2 }} />
         </div>
         <div>
           <Kicker light>Chi sono</Kicker>

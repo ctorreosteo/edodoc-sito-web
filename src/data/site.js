@@ -8,6 +8,7 @@ export const SITE = {
   instagram: 'https://www.instagram.com/edodoc_/',
   youtube: 'https://www.youtube.com/@edodoc',
   privacy: 'https://www.iubenda.com/privacy-policy/23796137',
+  cookie: 'https://www.iubenda.com/privacy-policy/23796137/cookie-policy',
   // Form MailerLite della masterclass (lo stesso del sito Shopify)
   masterclassForm: 'https://assets.mailerlite.com/jsonp/1264236/forms/180484059996095718/subscribe',
   // Link per scaricare il libro: finché è vuoto la pagina /libro mostra l'avviso di manutenzione

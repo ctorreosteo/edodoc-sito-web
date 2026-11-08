@@ -26,6 +26,13 @@ const Privacy = () => {
   return null
 }
 
+const Cookie = () => {
+  useEffect(() => {
+    window.location.replace(SITE.cookie)
+  }, [])
+  return null
+}
+
 const App = () => (
   <Router>
     <Suspense fallback={<div className="page-loading" />}>
@@ -54,6 +61,7 @@ const App = () => (
           <Route path="/policies/privacy-policy" element={<Privacy />} />
           <Route path="/pages/privacy-policy" element={<Privacy />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/cookie-policy" element={<Cookie />} />
 
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -93,6 +93,9 @@ const Footer = () => {
           <a href={SITE.privacy} target="_blank" rel="noopener noreferrer">
             Privacy
           </a>
+          <a href={SITE.cookie} target="_blank" rel="noopener noreferrer">
+            Cookie
+          </a>
           <span>© {new Date().getFullYear()}</span>
         </div>
       </div>

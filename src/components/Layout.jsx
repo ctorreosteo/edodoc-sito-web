@@ -4,6 +4,7 @@ import { AnimatePresence, MotionConfig, motion } from 'framer-motion'
 import Lenis from 'lenis'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { CompassProgress, Dial, Needle } from './Compass'
+import CookieBanner from './CookieBanner'
 import Footer from './Footer'
 import { Magnetic } from './Kit'
 import { NAV } from '../data/site'
@@ -200,6 +201,7 @@ const Layout = () => {
           </main>
           <Footer />
         </div>
+        <CookieBanner ready={!intro} />
       </IntroContext.Provider>
     </MotionConfig>
   )

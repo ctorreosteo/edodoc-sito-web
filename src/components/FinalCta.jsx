@@ -19,7 +19,7 @@ const FinalCta = () => (
       </h2>
       <Reveal delay={0.2}>
         <p className="lead">
-          Puoi ripartire lunedì con l'ennesimo schema, da solo, come le altre volte. Oppure puoi farti affiancare da chi lavora ogni giorno con persone che hanno già provato tutto. Bastano 30 minuti gratuiti per sapere se ha senso.
+          Puoi ripartire lunedì con l'ennesimo schema, da solo/a, come le altre volte. Oppure puoi farti affiancare da chi lavora ogni giorno con persone che hanno già provato tutto. Bastano 30 minuti gratuiti per sapere se ha senso.
           {POSTI.esauriti && ` I posti di quest'anno sono esauriti: si riparte a ${POSTI.mese}.`}
         </p>
       </Reveal>

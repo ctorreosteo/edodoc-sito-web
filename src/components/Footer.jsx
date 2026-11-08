@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { Dial, Needle } from './Compass'
+import { apriPreferenzeCookie } from './CookieBanner'
 import { Reveal } from './Kit'
 import { SITE } from '../data/site'
 import { EASE, prefersReducedMotion } from '../lib/motion'
@@ -96,6 +97,9 @@ const Footer = () => {
           <a href={SITE.cookie} target="_blank" rel="noopener noreferrer">
             Cookie
           </a>
+          <button type="button" className="foot__pref" onClick={apriPreferenzeCookie}>
+            Preferenze cookie
+          </button>
           <span>© {new Date().getFullYear()}</span>
         </div>
       </div>

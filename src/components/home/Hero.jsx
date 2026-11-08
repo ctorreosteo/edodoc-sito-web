@@ -43,13 +43,13 @@ const Hero = () => {
               <MaskLines
                 immediate
                 delay={0.15}
-                lines={[{ text: 'Perdi peso' }, { text: 'mangiando' }, { text: 'cibo vero.', className: 'serif accent' }]}
+                lines={[{ text: 'Perdi peso' }, { text: 'mangiando' }, { text: 'il cibo che ami.', className: 'serif accent' }]}
               />
             </h1>
           )}
 
           <motion.p className="lead hero__lead" {...fadeUp(play, 0.75)}>
-            <strong>Niente fame, niente calorie da contare, niente ricadute da affrontare da solo.</strong> Le diete falliscono perché finiscono. Con il Metodo Bussola ti affianco 1-1 per 6 mesi: per tornare in forma, ritrovare energia e imparare a restarci, anche quando la vita si mette di traverso.
+            <strong>Niente fame, niente calorie da contare, niente ricadute da affrontare da solo/a.</strong> Le diete falliscono perché finiscono. Con il Metodo Bussola ti affianco 1-1 per 6 mesi: per tornare in forma, ritrovare energia e imparare a restarci, anche quando la vita si mette di traverso.
           </motion.p>
 
           <motion.div className="cta-row" {...fadeUp(play, 0.9)}>

@@ -994,6 +994,101 @@ ul {
   color: var(--orange);
 }
 
+.foot__pref {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 700;
+  color: var(--cream);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.foot__pref:hover {
+  color: var(--orange);
+}
+
+/* ---------- Banner cookie ---------- */
+
+.cookie {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 90;
+  padding: 22px 22px 18px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--night);
+  color: var(--cream);
+  box-shadow: 0 20px 60px rgba(5, 13, 28, 0.6);
+}
+
+.cookie p {
+  margin: 0 28px 16px 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.cookie p a {
+  color: var(--cream);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(246, 241, 234, 0.08);
+  color: var(--cream);
+  cursor: pointer;
+}
+
+.cookie__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Accetta e Rifiuta hanno lo stesso peso visivo, come chiede il Garante */
+.cookie__btn {
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid rgba(246, 241, 234, 0.3);
+  border-radius: 999px;
+  background: rgba(246, 241, 234, 0.05);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--cream);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cookie__btn:hover {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+@media (min-width: 720px) {
+  .cookie {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+    max-width: 420px;
+  }
+}
+
 @media (min-width: 960px) {
   .foot__grid {
     grid-template-columns: 1.15fr 0.85fr;

@@ -18,7 +18,7 @@ const CONFRONTO = [
   ['Grassi e carne da temere', 'Proteine animali di qualità e grassi non demonizzati'],
   ['Uno sgarro e salta tutto', 'Principio 80/20: i pasti liberi sono dentro il piano'],
   ['Lavora solo su cosa mangi', 'Lavora su cosa mangi e su chi sei quando mangi'],
-  ['Finisce, e resti solo', 'Finisce quando sai orientarti da solo'],
+  ['Finisce, e resti solo/a', 'Finisce quando sai orientarti da solo/a'],
 ]
 
 const STRUMENTI = [
@@ -34,7 +34,7 @@ const ROTTA = [
   { title: 'Capisci cosa ti blocca', text: 'Una videochiamata gratuita di 30 minuti: analizzo la tua storia, individuo cosa ti blocca e ti dico con chiarezza se il percorso fa per te.' },
   { title: 'Ricevi un piano cucito su di te', text: 'Costruiamo alimentazione e movimento sui tuoi ritmi, senza stravolgere la tua vita.' },
   { title: 'Non resti mai solo', text: 'Check settimanali, chat privata e adattamenti continui. Nei momenti difficili non sei mai solo.' },
-  { title: 'Sai orientarti senza di me', text: "Alla fine sai scegliere da solo, a casa e fuori casa. Non dipendi più da una dieta, né da me. È questo il vero obiettivo." },
+  { title: 'Sai orientarti senza di me', text: "Alla fine sai scegliere da solo/a, a casa e fuori casa. Non dipendi più da una dieta, né da me. È questo il vero obiettivo." },
 ]
 
 const CIBI = ['Carne', 'Pesce', 'Uova', 'Frutta']
@@ -161,7 +161,7 @@ const MetodoBussola = () => {
             </h1>
             <Reveal delay={0.4}>
               <p className="lead">
-                <strong>{STATS.mesi} mesi di affiancamento 1-1 per perdere peso mangiando cibo vero, ritrovare energia e imparare a gestirti da solo.</strong> Niente fame da sopportare, niente calorie da contare: un'alimentazione low-carb flessibile con principio 80/20, dove la pizza con gli amici è già nel piano.
+                <strong>{STATS.mesi} mesi di affiancamento 1-1 per perdere peso mangiando cibo vero, ritrovare energia e imparare a gestirti da solo/a.</strong> Niente fame da sopportare, niente calorie da contare: un'alimentazione low-carb flessibile con principio 80/20, dove la pizza con gli amici è già nel piano.
               </p>
             </Reveal>
             <Reveal delay={0.5} className="cta-row">

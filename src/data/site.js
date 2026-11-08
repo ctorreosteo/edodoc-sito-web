@@ -72,7 +72,7 @@ export const PROBLEMI = [
   },
   {
     title: '«Basta seguire lo schema»',
-    text: 'Uno schema non sa che lavori fino a tardi, che viaggi, che ceni fuori. Al primo imprevisto salta, e resti solo con mille consigli contrastanti e nessuno a cui chiedere.',
+    text: 'Uno schema non sa che lavori fino a tardi, che viaggi, che ceni fuori. Al primo imprevisto salta, e resti solo/a con mille consigli contrastanti e nessuno a cui chiedere.',
   },
 ]
 
@@ -100,7 +100,7 @@ export const PER_TE = [
 export const NON_PER_TE = [
   ['Cerchi la dieta lampo per perdere peso in tre settimane', 'qui si costruisce qualcosa che deve reggere dopo, non solo durante'],
   ['Vuoi uno schema da seguire senza metterti in discussione', 'il percorso lavora anche su abitudini e comportamenti, e chiede la tua parte'],
-  ['Stai cercando la pillola o il trucco che faccia il lavoro al posto tuo', 'non vendo scorciatoie: ti affianco mentre impari a orientarti da solo'],
+  ['Stai cercando la pillola o il trucco che faccia il lavoro al posto tuo', 'non vendo scorciatoie: ti affianco mentre impari a orientarti da solo/a'],
 ]
 
 export const CITAZIONI = [
